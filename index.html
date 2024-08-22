@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset = "UTF-8">
+<meta http-equiv ="X-UA-Compatible" content = "IE=edge">
+<meta name = "viewport" content = "width = device-width, initial-scale=1.0">
+<title>Personal Portfolio Website</title>
+
+<link rel = "stylesheet" href = "style.css">
+<script src="https://kit.fontawesome.com/6a6571c932.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id = "header">
+        <div class="container">
+            <nav>
+                <img src = "logo.png" class = "logo">
+                <ul id="sidemenu">
+                    <li><a href = "#header"> Home </a> </li>
+                    <li><a href = "#about"> About me </a> </li>
+                    <li><a href = "#services"> Skills and services </a> </li>
+                    <li><a href = "#portfolio"> Portfolio </a> </li>
+                    <li><a href = "#contact"> Contact </a> </li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> B.S in Computer Science and Technology </p>
+                <h1>Hello, I am </h1>
+                <h1>Amilka Lopez</h1>
+            </div>
+        </div>
+    </div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src = "me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>As a third-semester Computer Science student, I am actively seeking opportunities to apply my skills and knowledge in programming, software design, technical support, and cybersecurity. Proficient in Python and SQL for data analysis and cleansing, I bring expertise in tools such as Microsoft Office 365, R Studio, Matlab, VS Code, Google Colab and Spyder. Additionally, I utilize C++, HTML, and CSS for software engineering and web development projects. With a robust portfolio encompassing over 10 programming ventures, I am eager to contribute to impactful initiatives in the field of technology.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education and achievements')">Education and Achievements</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Analysis</span><br>Data analysis using R, SQL and Python. Find trends and interpret information for proper decision-making. </li>
+                        <li><span>UX/UI</span><br>Html and CSS for creative and cohesive web interface designing. Experience with wireframes, databases and version control systems.</li>
+                        <li><span>Computer simulations</span><br>Depict physics-based and quemistry-based simulations using Python. Monte Carlo and Brownian particle simulations. Usage of parallel programming to enhance code performance.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Data Analysis</span><br>Case study interpretations</li>
+                        <li><span>UX/UI</span><br>Trend analysis and case study applications</li>
+                        <li><span>Computer simulations</span><br> Brownian particle motion simulation following theoretical and analytic approaches </li>
+                        <li><span>AI Implementations</span><br>Machine learning using neural networks and Adam models</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education and achievements">
+                    <ul>
+                        <li><span>Google Career Certificates</span><br>Data analysis and IT support </li>
+                        <li><span>Member of</span><br>programming club, engineering student group (as president), community center that provides advanced computational classes.</li>
+                        <li><span>Project manager as vicepresident of a student group</span><br>Assumed the role of training partner organizations that provided STEAM classes. Developed the material for the technology class. </li>
+                        <li><span> Tecnologico de Monterrey</span><br>Third semester of Computer Science. Cumulative grade of 90.</li>
+                    </ul>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class = "sub-title">Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>From setting up the website to following safety conventions to ensure a positive customer experience.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Computer simulation and machine learning</h2>
+                <p>Train a model to predict based on trends found in a dataframe. </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-terminal"></i>
+                <h2>Full stack development</h2>
+                <p>Usage of several programming languages for app, web and software development. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+<div class="container">
+    <h1 class = "sub-title">My work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="brownian.jpeg">
+            <div class="layer">
+                <h3>Data analysis and computational modeling</h3>
+                <p>A Brownian motion simulation with Python and CUDA analyzed interactions between multiple particles under both deterministic and stochastic forces. The use of CUDA accelerated computations by parallelizing tasks on the GPU.</p>
+                <a href="https://github.com/DanAG-Am/Brownian-Particle-Simulation"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="ux.png">
+            <div class="layer">
+                <h3>Website design and development</h3>
+                <p>Use of CSS and html to redesign websites, prioritizing and enhancing consumer experience through interactive and dynamic platforms without hindering accessibility. </p>
+                <a href="https://danag-am.github.io/Talleres-STEAM/STEAM.html"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="neural.png">
+            <div class="layer">
+                <h3>Cancer Classification Neural Network</h3>
+                <p>This project implements a neural network using TensorFlow's Keras API to perform binary classification of cancer diagnostic data.</p>
+                <a href="https://github.com/DanAG-Am/Cancer-Classification-Neural-Network"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    <a href="https://colab.research.google.com/drive/1rHK0-ZI7ietJ0Ef0nMFd2xKxvU6DpYyQ?usp=sharing" class="btn">See more</a>
+</div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> amilka27lopez@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +52 55 2858 3380</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/DanAG-Am"><i class="fa-brands fa-github"></i></a>
+                    <a href=""></a>
+                </div>
+                <a href="CV.AmilkaDanielaLópezAguilar.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Amilka.</p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html> 
