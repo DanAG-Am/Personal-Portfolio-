@@ -1,192 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    
-<meta charset = "UTF-8">
-<meta http-equiv ="X-UA-Compatible" content = "IE=edge">
-<meta name = "viewport" content = "width = device-width, initial-scale=1.0">
-<title>Personal Portfolio Website</title>
-
-<link rel = "stylesheet" href = "style.css">
-<script src="https://kit.fontawesome.com/6a6571c932.js" crossorigin="anonymous"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#122a27">
+    <meta name="description" content="Amilka Lopez builds thoughtful software, data projects, and interactive experiences. Explore her work and get in touch.">
+    <title>Amilka Lopez | Software & Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id = "header">
-        <div class="container">
-            <nav>
-                <img src = "logo.png" class = "logo">
-                <ul id="sidemenu">
-                    <li><a href = "#header"> Home </a> </li>
-                    <li><a href = "#about"> About me </a> </li>
-                    <li><a href = "#services"> Skills and services </a> </li>
-                    <li><a href = "#portfolio"> Portfolio </a> </li>
-                    <li><a href = "#contact"> Contact </a> </li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p> B.S in Computer Science and Technology </p>
-                <h1>Hello, I am </h1>
-                <h1>Amilka Lopez</h1>
-            </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header id="home" class="hero">
+        <nav class="nav shell" aria-label="Main navigation">
+            <a class="wordmark" href="#home" aria-label="Amilka Lopez, home">amilka<span class="wordmark-dot">.</span></a>
+            <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="nav-links"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></div>
+        </nav>
+        <div class="hero-content shell">
+            <p class="eyebrow hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> SOFTWARE · DATA · CREATIVE THINKING</p>
+            <h1>Hi, I'm<br><span>Amilka Lopez.</span></h1>
+            <p class="hero-intro">I turn curious questions into useful technology, from data-driven models to experiences made for people.</p>
+            <div class="hero-actions"><a class="button button-light" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link hero-link" href="#about">Get to know me <span aria-hidden="true">↓</span></a></div>
         </div>
-    </div>
-
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src = "me.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class = "sub-title">About Me</h1>
-                <p>As a third-semester Computer Science student, I am actively seeking opportunities to apply my skills and knowledge in programming, software design, technical support, and cybersecurity. Proficient in Python and SQL for data analysis and cleansing, I bring expertise in tools such as Microsoft Office 365, R Studio, Matlab, VS Code, Google Colab and Spyder. Additionally, I utilize C++, HTML, and CSS for software engineering and web development projects. With a robust portfolio encompassing over 10 programming ventures, I am eager to contribute to impactful initiatives in the field of technology.</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links"onclick="opentab('education and achievements')">Education and Achievements</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Data Analysis</span><br>Data analysis using R, SQL and Python. Find trends and interpret information for proper decision-making. </li>
-                        <li><span>UX/UI</span><br>Html and CSS for creative and cohesive web interface designing. Experience with wireframes, databases and version control systems.</li>
-                        <li><span>Computer simulations</span><br>Depict physics-based and quemistry-based simulations using Python. Monte Carlo and Brownian particle simulations. Usage of parallel programming to enhance code performance.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Data Analysis</span><br>Case study interpretations</li>
-                        <li><span>UX/UI</span><br>Trend analysis and case study applications</li>
-                        <li><span>Computer simulations</span><br> Brownian particle motion simulation following theoretical and analytic approaches </li>
-                        <li><span>AI Implementations</span><br>Machine learning using neural networks and Adam models</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education and achievements">
-                    <ul>
-                        <li><span>Google Career Certificates</span><br>Data analysis and IT support </li>
-                        <li><span>Member of</span><br>programming club, engineering student group (as president), community center that provides advanced computational classes.</li>
-                        <li><span>Project manager as vicepresident of a student group</span><br>Assumed the role of training partner organizations that provided STEAM classes. Developed the material for the technology class. </li>
-                        <li><span> Tecnologico de Monterrey</span><br>Third semester of Computer Science. Cumulative grade of 90.</li>
-                    </ul>
+        <div class="hero-footer shell"><span>COMPUTER SCIENCE & TECHNOLOGY</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+    </header>
+    <main id="main">
+        <section class="section about-section" id="about" aria-labelledby="about-title">
+            <div class="shell about-layout">
+                <div class="about-photo-wrap"><img src="assets/me.jpg" alt="Portrait of Amilka Lopez" class="about-photo" loading="lazy"><span class="photo-caption">A little about me / 01</span></div>
+                <div class="about-copy">
+                    <p class="eyebrow">01 / THE PERSON BEHIND THE CODE</p>
+                    <h2 id="about-title">Curiosity is<br>my <em>starting point.</em></h2>
+                    <p class="lede">I'm Amilka, a Computer Science and Technology student interested in building things that make a difference.</p>
+                    <p>My work moves between software engineering, data analysis, machine learning, and computational modeling. I enjoy finding the human question behind a technical challenge and working through it with care.</p>
+                    <div class="about-tabs" role="tablist" aria-label="More about Amilka">
+                        <button class="about-tab" type="button" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="true">Skills</button>
+                        <button class="about-tab" type="button" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1">Experience</button>
+                        <button class="about-tab" type="button" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1">Education</button>
+                    </div>
+                    <div class="tab-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills"><ul class="detail-list"><li><strong>Data & AI</strong><span>Python, SQL, R, machine learning, and data visualization</span></li><li><strong>Development</strong><span>HTML, CSS, JavaScript, C++, and version control</span></li><li><strong>Modeling</strong><span>Computational simulations and analytical problem-solving</span></li></ul></div>
+                    <div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" hidden><ul class="detail-list"><li><strong>Software projects</strong><span>Web experiences, interactive tools, and collaborative development</span></li><li><strong>Data projects</strong><span>Analysis, modeling, and neural network experiments</span></li><li><strong>Community</strong><span>STEAM teaching materials and student group leadership</span></li></ul></div>
+                    <div class="tab-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" hidden><ul class="detail-list"><li><strong>Tecnológico de Monterrey</strong><span>B.S. in Computer Science and Technology</span></li><li><strong>Google Career Certificates</strong><span>Data Analytics and IT Support</span></li></ul></div>
                 </div>
             </div>
-         
-        </div>
-    </div>
-</div>
-<div id="services">
-    <div class="container">
-        <h1 class = "sub-title">Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>From setting up the website to following safety conventions to ensure a positive customer experience.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-database"></i>
-                <h2>Computer simulation and machine learning</h2>
-                <p>Train a model to predict based on trends found in a dataframe. </p>
-            </div>
-            <div>
-                <i class="fa-solid fa-terminal"></i>
-                <h2>Full stack development</h2>
-                <p>Usage of several programming languages for app, web and software development. </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="portfolio">
-<div class="container">
-    <h1 class = "sub-title">My work</h1>
-    <div class="work-list">
-        <div class="work">
-            <img src="brownian.jpeg">
-            <div class="layer">
-                <h3>Data analysis and computational modeling</h3>
-                <p>A Brownian motion simulation with Python and CUDA analyzed interactions between multiple particles under both deterministic and stochastic forces. The use of CUDA accelerated computations by parallelizing tasks on the GPU.</p>
-                <a href="https://github.com/DanAG-Am/Brownian-Particle-Simulation"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-        <div class="work">
-            <img src="ux.png">
-            <div class="layer">
-                <h3>Website design and development</h3>
-                <p>Use of CSS and html to redesign websites, prioritizing and enhancing consumer experience through interactive and dynamic platforms without hindering accessibility. </p>
-                <a href="https://danag-am.github.io/Talleres-STEAM/STEAM.html"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-        <div class="work">
-            <img src="neural.png">
-            <div class="layer">
-                <h3>Cancer Classification Neural Network</h3>
-                <p>This project implements a neural network using TensorFlow's Keras API to perform binary classification of cancer diagnostic data.</p>
-                <a href="https://github.com/DanAG-Am/Cancer-Classification-Neural-Network"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-    </div>
-    <a href="https://colab.research.google.com/drive/1rHK0-ZI7ietJ0Ef0nMFd2xKxvU6DpYyQ?usp=sharing" class="btn">See more</a>
-</div>
-</div>
-
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa fa-envelope" aria-hidden="true"></i> amilka27lopez@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> +52 55 2858 3380</p>
-                <div class="social-icons">
-                    <a href="www.linkedin.com/in/amilka-daniela-l-587954334"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/DanAG-Am"><i class="fa-brands fa-github"></i></a>
-                    <a href=""></a>
+        </section>
+        <section class="section expertise-section" id="expertise" aria-labelledby="expertise-title">
+            <div class="shell">
+                <div class="section-heading"><div><p class="eyebrow">02 / WHAT I DO</p><h2 id="expertise-title">Ideas meet <em>execution.</em></h2></div><p>Working across disciplines helps me connect the dots, not just write the code.</p></div>
+                <div class="expertise-grid">
+                    <article class="expertise-item"><span class="expertise-number">01</span><div class="expertise-icon" aria-hidden="true">{ }</div><h3>Software development</h3><p>Building thoughtful digital tools and interfaces with a focus on usability and clarity.</p></article>
+                    <article class="expertise-item"><span class="expertise-number">02</span><div class="expertise-icon" aria-hidden="true">∑</div><h3>Data & machine learning</h3><p>Finding patterns in data and exploring what models can help us understand or predict.</p></article>
+                    <article class="expertise-item"><span class="expertise-number">03</span><div class="expertise-icon" aria-hidden="true">◎</div><h3>Computational modeling</h3><p>Translating complex systems into experiments, simulations, and actionable insights.</p></article>
                 </div>
-                <a href="CV.AmilkaDanielaLópezAguilar.pdf" download class="btn btn2">Download CV</a>
             </div>
-            <div class="contact-right">
-                
+        </section>
+        <section class="section work-section" id="work" aria-labelledby="work-title">
+            <div class="shell">
+                <div class="section-heading work-heading"><div><p class="eyebrow">03 / SELECTED WORK</p><h2 id="work-title">Things I've <em>built.</em></h2></div><p>A selection of projects from my public GitHub, spanning AI, software, simulation, and the web.</p></div>
+                <div class="project-toolbar"><div class="filters" role="group" aria-label="Filter projects"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter" data-filter="ai" aria-pressed="false">AI & data</button><button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button><button type="button" class="filter" data-filter="web" aria-pressed="false">Web</button></div><label class="search-wrap"><span class="visually-hidden">Search projects</span><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search projects" autocomplete="off"></label></div>
+                <p class="result-count" id="result-count" role="status" aria-live="polite">Showing 6 projects</p>
+                <div class="project-grid" id="project-grid">
+                    <article class="project-card" data-category="ai" data-search="ai data science final project notebooks machine learning"><div class="project-visual visual-ai"><span class="visual-index">01 / AI & DATA</span><span class="visual-mark" aria-hidden="true">AI<span>↗</span></span><span class="visual-bottom">EXPERIMENT / LEARN / BUILD</span></div><div class="project-body"><p class="project-type">AI & DATA SCIENCE · 2026</p><h3>AI & Data Science Final Project</h3><p>A final project from an AI and data science concentration, collected in a public notebook repository.</p><a href="https://github.com/DanAG-Am/TC3009C_Proyecto" target="_blank" rel="noopener noreferrer" aria-label="View AI and Data Science Final Project on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                    <article class="project-card" data-category="ai software" data-search="adla themis reusable ai agent skill structured reasoning tool orchestration task execution data analytics python"><div class="project-visual visual-themis"><span class="visual-index">02 / AI TOOLS</span><span class="visual-mark" aria-hidden="true">th<span>·</span></span><span class="visual-bottom">REASON / ORGANIZE / ACT</span></div><div class="project-body"><p class="project-type">AI TOOLS · 2026</p><h3>ADLA Themis</h3><p>A reusable AI agent skill for structured reasoning, tool orchestration, and data analytics tasks.</p><a href="https://github.com/DanAG-Am/adla_themis" target="_blank" rel="noopener noreferrer" aria-label="View ADLA Themis on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                    <article class="project-card" data-category="software" data-search="smart project management spm 2026 python repository"><div class="project-visual visual-spm"><span class="visual-index">03 / SOFTWARE</span><span class="visual-mark" aria-hidden="true">SPM<span>↗</span></span><span class="visual-bottom">PLAN / BUILD / ITERATE</span></div><div class="project-body"><p class="project-type">SOFTWARE · 2026</p><h3>Smart Project Management</h3><p>A Python repository exploring smart project management workflows.</p><a href="https://github.com/DanAG-Am/SPM_2026" target="_blank" rel="noopener noreferrer" aria-label="View Smart Project Management on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                    <article class="project-card" data-category="ai" data-search="brownian particle simulation python computational modeling stochastic deterministic forces"><div class="project-visual visual-photo"><img src="assets/brownian.jpeg" alt="Particle simulation visualization" loading="lazy"><span class="visual-index">04 / SIMULATION</span></div><div class="project-body"><p class="project-type">COMPUTATIONAL MODELING</p><h3>Brownian Particle Simulation</h3><p>Modeling particle motion with deterministic and stochastic forces in Python.</p><a href="https://github.com/DanAG-Am/Brownian-Particle-Simulation" target="_blank" rel="noopener noreferrer" aria-label="View Brownian Particle Simulation on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                    <article class="project-card" data-category="ai" data-search="cancer classification neural network tensorflow keras machine learning diagnosis"><div class="project-visual visual-photo"><img src="assets/neural.png" alt="Neural network illustration" loading="lazy"><span class="visual-index">05 / MACHINE LEARNING</span></div><div class="project-body"><p class="project-type">MACHINE LEARNING</p><h3>Cancer Classification Network</h3><p>A neural network that classifies diagnostic data using TensorFlow and Keras.</p><a href="https://github.com/DanAG-Am/Cancer-Classification-Neural-Network" target="_blank" rel="noopener noreferrer" aria-label="View Cancer Classification Network on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                    <article class="project-card" data-category="web" data-search="talleres steam workshops web design education html css"><div class="project-visual visual-photo"><img src="assets/ux.png" alt="Web design project illustration" loading="lazy"><span class="visual-index">06 / WEB</span></div><div class="project-body"><p class="project-type">WEB & EDUCATION</p><h3>Talleres STEAM</h3><p>A website for STEAM workshops encouraging tomorrow's young engineers.</p><a href="https://github.com/DanAG-Am/Talleres-STEAM" target="_blank" rel="noopener noreferrer" aria-label="View Talleres STEAM on GitHub">View repository <span aria-hidden="true">↗</span></a></div></article>
+                </div>
+                <p class="no-results" id="no-results" hidden>No projects match that search. Try another term or category.</p>
+                <a class="all-work-link" href="https://github.com/DanAG-Am?tab=repositories" target="_blank" rel="noopener noreferrer">See all repositories on GitHub <span aria-hidden="true">↗</span></a>
             </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © Amilka.</p>
-    </div>
-</div>
-
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for (tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-</script>
-
+        </section>
+        <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-layout"><div><p class="eyebrow">04 / GET IN TOUCH</p><h2 id="contact-title">Have an idea?<br><em>Let's make it real.</em></h2><p>I'm always interested in a good question, a thoughtful collaboration, or a new challenge.</p><a class="button button-light" href="mailto:amilka27lopez@gmail.com?subject=Let's%20connect">Send me an email <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><span>FIND ME ELSEWHERE</span><a href="https://www.linkedin.com/in/amilka-daniela-l-587954334/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/DanAG-Am" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div></section>
+    </main>
+    <footer class="footer"><div class="shell"><a class="wordmark" href="#home" aria-label="Back to top">amilka<span class="wordmark-dot">.</span></a><span>Made with curiosity. © <span id="year">2026</span> Amilka Lopez</span><a href="#home">Back to top ↑</a></div></footer>
 </body>
-</html> 
+</html>
