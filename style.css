@@ -39,6 +39,8 @@ h2 em { color: #208475; font-weight: 500; font-style: normal; }
 .nav-links a { font-size: 14px; font-weight: 600; text-decoration: none; transition: color .2s; }
 .nav-links a:hover, .text-link:hover { color: var(--accent); }
 .nav-links .nav-contact { border: 1px solid rgba(255,255,255,.65); padding: 11px 18px; }
+.language-toggle { border: 1px solid rgba(255,255,255,.45); background: transparent; color: #fff; padding: 9px 13px; font-size: 13px; font-weight: 700; }
+.language-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .nav-contact span { margin-left: 12px; }
 .menu-toggle { display: none; border: 0; background: transparent; color: #fff; width: 44px; height: 44px; padding: 10px; }
 .menu-toggle span { display: block; height: 2px; margin: 5px 0; background: currentColor; }
